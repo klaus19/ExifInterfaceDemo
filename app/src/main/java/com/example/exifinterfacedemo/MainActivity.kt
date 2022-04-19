@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.exifinterface.media.ExifInterface
 import com.example.exifinterfacedemo.databinding.ActivityMainBinding
+import java.io.ByteArrayOutputStream
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,16 +27,31 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnClick.setOnClickListener {
 
-            letsCompress()
+            var convertedImage:Bitmap = getResizedImage(scaledBitmap,500)
+            binding.alpha.setImageBitmap(convertedImage)
+
         }
 
     }
 
-    private fun letsCompress() {
 
+    //Resizing and compressing the image
+    fun getResizedImage(image: Bitmap,maxSize: Int): Bitmap{
+        var width = image.width
+        var height = image.height
+        var bimMapRatio:Float = width.toFloat() / height.toFloat()
 
-
+        if(bimMapRatio> 1){
+            width = maxSize
+            height =((width / bimMapRatio).toInt())
+        }else{
+            height = maxSize
+            width = ((height * bimMapRatio).toInt())
+        }
+        return Bitmap.createScaledBitmap(image, height,width,true)
     }
+
+
 
 
 }
