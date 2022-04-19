@@ -4,7 +4,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-  
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/original"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="100dp"
+        android:text="Click"
+        android:layout_marginTop="10dp"
+        android:id="@+id/btnClick"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/original" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/btnClick"
+        android:id="@+id/alpha"
+        />
+
+
+
 
 
 
