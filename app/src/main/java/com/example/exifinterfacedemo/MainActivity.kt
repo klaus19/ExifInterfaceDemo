@@ -2,6 +2,7 @@ package com.example.exifinterfacedemo
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.BitmapShader
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.exifinterface.media.ExifInterface
@@ -72,5 +73,7 @@ class MainActivity : AppCompatActivity() {
 
     } */
 
+
+    }
 
 }
