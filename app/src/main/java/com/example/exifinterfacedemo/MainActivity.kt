@@ -23,13 +23,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-
        bmp = BitmapFactory.decodeResource(resources,R.drawable.shibba)
         val nh = ((bmp.height) * 512.0/ bmp.width)
         scaledBitmap = Bitmap.createScaledBitmap(bmp,512,nh.toInt(),true)
         binding.original.setImageBitmap(scaledBitmap)
 
-       // randomPicture()
+
+
+     //  randomPicture()
 
         binding.btnClick.setOnClickListener {
 
@@ -58,7 +59,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    /* Randomly selects Image
+   /*  Randomly selects Image
     fun randomPicture(){
         for ( i in 0 until pictures.size-1){
             val random = (pictures[i])
